@@ -138,7 +138,7 @@
 - name: "RedHat | SELinux Update - Install Policy Core Utils"
   yum:
     name: policycoreutils-python
-    state: present
+    state: installed
     
 - name: "RedHat | SELinux Update - Configure Policy Core Utils"
   shell: |
