@@ -143,14 +143,13 @@
 - name: "RedHat | SELinux Update - Configure Policy Core Utils"
   become: true
   shell: |
-    touch output.txt
-    cd ~ &> output.txt
+    cd ~
     curl https://support.zabbix.com/secure/attachment/53320/zabbix_server_add.te > zabbix_server_add.te
-    checkmodule -M -m -o zabbix_server_add.mod zabbix_server_add.te &> output3.txt
-    semodule_package -m zabbix_server_add.mod -o zabbix_server_add.pp &> output4.txt
-    setenforce 0 &> output5.txt
-    semodule -i zabbix_server_add.pp &> output6.txt
-    setenforce 1 &> output7.txt
+    checkmodule -M -m -o zabbix_server_add.mod zabbix_server_add.te
+    semodule_package -m zabbix_server_add.mod -o zabbix_server_add.pp
+    setenforce 0
+    semodule -i zabbix_server_add.pp
+    setenforce 1
 
 
   
