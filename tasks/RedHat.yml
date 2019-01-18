@@ -141,6 +141,7 @@
     state: present
     
 - name: "RedHat | SELinux Update - Configure Policy Core Utils"
+  become: true
   shell: |
     touch output.txt
     cd ~ &> output.txt
