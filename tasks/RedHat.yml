@@ -134,3 +134,20 @@
     - selinux_allow_zabbix_can_network
   tags:
     - zabbix-server
+    
+- name: "RedHat | SELinux Update - Install Policy Core Utils"
+  yum:
+    name: policycoreutils-python
+    state: present
+    
+- name: "RedHat | SELinux Update - Configure Policy Core Utils"
+  shell: |
+    cd ~
+    curl https://support.zabbix.com/secure/attachment/53320/zabbix_server_add.te > zabbix_server_add.te
+    semodule_package -m zabbix_server_add.mod -o zabbix_server_add.pp
+    setenforce 0
+    semodule -i zabbix_server_add.pp
+    setenforce 1
+
+
+  
