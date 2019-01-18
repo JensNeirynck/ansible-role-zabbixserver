@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: zabbix-server
   author: Werner Dijkerman
   description: Installing and maintaining zabbix-server for RedHat/Debian/Ubuntu.
   company: myCompany.Dotcom
