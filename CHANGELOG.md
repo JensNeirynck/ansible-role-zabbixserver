@@ -4,6 +4,9 @@ Below an overview of all changes in the releases.
 
 Version (Release date)
 
+1.5.0
+ * updates for HA
+
 1.4.0   (2018-11-23)
 
   * Fixes Deprecation Warnings for Ansible 2.7 to prepare.yml #121 (By pull request: borener (Thanks!))
