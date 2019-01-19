@@ -4,7 +4,7 @@ Below an overview of all changes in the releases.
 
 Version (Release date)
 
-1.5.0
+1.5.0   (2018-01-19)
  * updates for HA
 
 1.4.0   (2018-11-23)
